@@ -6,6 +6,12 @@ angular.module('adoptionBlog', [ 'ngRoute'
   '$locationProvider',
   '$routeProvider',
   function($locationProvider, $routeProvider) {
+
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false // good for anything IE9+
+    })
+
     $routeProvider
       .when('/', {
         templateUrl: 'ngViews/home.html',
