@@ -16,6 +16,10 @@ angular.module('adoptionBlog', [ 'ngRoute'
       .when('/', {
         templateUrl: 'ngViews/home.html',
         controller: 'PostsCtrl'
+      })
+      .when('/create', {
+        templateUrl: 'ngViews/create.html',
+        controller: 'AdminCreateCtrl'
       });
 
     $routeProvider.otherwise({ redirectTo: '/' });
